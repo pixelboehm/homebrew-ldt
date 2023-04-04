@@ -5,20 +5,20 @@
 class Lightbulb < Formula
   desc ""
   homepage "https://github.com/pixelboehm/ldt"
-  version "0.1.5"
+  version "0.2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.1.5/lightbulb_Darwin_arm64.tar.gz"
-      sha256 "5f30e5c5d0bd5c1258e060337de1cbdbf0b2839e33378d4a4e71cfd0b42b2315"
+    if Hardware::CPU.intel?
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.2.0/lightbulb_Darwin_x86_64.tar.gz"
+      sha256 "21eedda669ed427fd1b4c112cab2eafe4857c0f18b43a60eee249e9853ceaa4f"
 
       def install
         bin.install "lightbulb"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.1.5/lightbulb_Darwin_x86_64.tar.gz"
-      sha256 "b4b38839e4c93ce3648de22b2b0e85e544f606171cf443505c38d856088fbbea"
+    if Hardware::CPU.arm?
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.2.0/lightbulb_Darwin_arm64.tar.gz"
+      sha256 "29332a94e1e0dbcc3b85eb71fd629f84dfc6580c4f2a9f3f2726d3846e979632"
 
       def install
         bin.install "lightbulb"
@@ -28,16 +28,16 @@ class Lightbulb < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.1.5/lightbulb_Linux_arm64.tar.gz"
-      sha256 "a06f202f5c9cdefa045ac23dcba3a6ae2d73b1cf057fd13e9746f3090ad99a89"
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.2.0/lightbulb_Linux_arm64.tar.gz"
+      sha256 "c3910afd8892673a6727bd885c201629c30ba523d36cb78b6bab702eabe406ce"
 
       def install
         bin.install "lightbulb"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.1.5/lightbulb_Linux_x86_64.tar.gz"
-      sha256 "7950acb108005c7c1afa1798c9dc24590e644797e09f2dc82e9c3f83c4a97942"
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.2.0/lightbulb_Linux_x86_64.tar.gz"
+      sha256 "05a7d605385aa179c0593c221dc000205ae93fd4a366aea0e837177af639b8d2"
 
       def install
         bin.install "lightbulb"
