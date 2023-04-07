@@ -5,12 +5,12 @@
 class OrchestrationManager < Formula
   desc ""
   homepage "https://github.com/pixelboehm/longevity"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/pixelboehm/longevity/releases/download/v0.2.0/orchstration-manager_Darwin_arm64.tar.gz"
-      sha256 "10a64471625d5c533904b418733df249f4609261f39be7aaa59bc2b7e63dae47"
+      url "https://github.com/pixelboehm/longevity/releases/download/v0.3.0/orchstration-manager_Darwin_arm64.tar.gz"
+      sha256 "b3fc92cd882f8afa08f5be854b115357967f65da61de7962df88a7489ee07e90"
 
       def install
         system, "mkdir", "-p" "/etc/orchestration-manager"
@@ -20,8 +20,8 @@ class OrchestrationManager < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pixelboehm/longevity/releases/download/v0.2.0/orchstration-manager_Darwin_x86_64.tar.gz"
-      sha256 "a6aa3aad6a04da3a0e0807efc0b02d324100f98cdac6eaf9db2e7aa5c3ef8636"
+      url "https://github.com/pixelboehm/longevity/releases/download/v0.3.0/orchstration-manager_Darwin_x86_64.tar.gz"
+      sha256 "62461369fb19e70725981486241b7c070b8310053567aea3246c7ad6c753f9e1"
 
       def install
         system, "mkdir", "-p" "/etc/orchestration-manager"
@@ -34,8 +34,8 @@ class OrchestrationManager < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/pixelboehm/longevity/releases/download/v0.2.0/orchstration-manager_Linux_x86_64.tar.gz"
-      sha256 "0b18d4837052efcb9e7e0d9bbfd49e24ca899218404562f211a2442e707ea515"
+      url "https://github.com/pixelboehm/longevity/releases/download/v0.3.0/orchstration-manager_Linux_x86_64.tar.gz"
+      sha256 "f1d28c1323a15badd6ac452e9c7cc7af23d899c063a18b98dddfe9b9b802cb2a"
 
       def install
         system, "mkdir", "-p" "/etc/orchestration-manager"
@@ -45,8 +45,8 @@ class OrchestrationManager < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pixelboehm/longevity/releases/download/v0.2.0/orchstration-manager_Linux_arm64.tar.gz"
-      sha256 "6c81d28370d2180bd5b28adcf9c6c4210210af0d51a393d417f47ce2d84bc68b"
+      url "https://github.com/pixelboehm/longevity/releases/download/v0.3.0/orchstration-manager_Linux_arm64.tar.gz"
+      sha256 "7734ad32cb68e405d78559bbdadffaaedc1107c1adb965da51b5acc99eab2f3f"
 
       def install
         system, "mkdir", "-p" "/etc/orchestration-manager"
