@@ -5,20 +5,20 @@
 class Lightbulb < Formula
   desc ""
   homepage "https://github.com/pixelboehm/ldt"
-  version "0.2.2"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.2.2/lightbulb_Darwin_x86_64.tar.gz"
-      sha256 "2e49e049709236203fd39cc1a9ca8cedd4af68b1bd8183ef9fab89b80f817fae"
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.3.0/lightbulb_Darwin_x86_64.tar.gz"
+      sha256 "e3030d09d6311f502401827cb60b5f19633256360b859d6419f598fe6f377500"
 
       def install
         bin.install "lightbulb"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.2.2/lightbulb_Darwin_arm64.tar.gz"
-      sha256 "1ce01489026107b82605170d26001769d00dab9441f9a83aace87cbba640c840"
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.3.0/lightbulb_Darwin_arm64.tar.gz"
+      sha256 "bc456b699f405e6afe4d7ef8e979abd9d3427c6dd64e09880fe8e70121811379"
 
       def install
         bin.install "lightbulb"
@@ -28,16 +28,16 @@ class Lightbulb < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.2.2/lightbulb_Linux_arm64.tar.gz"
-      sha256 "3c63b4f96bcc797ccb0643014df687a0b10161f956f2e6989e5cce733eb749f1"
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.3.0/lightbulb_Linux_arm64.tar.gz"
+      sha256 "db2f33caf30d2b55d59c99ebb1e5c10c51071f78864745710d35da5ec9e8bb94"
 
       def install
         bin.install "lightbulb"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.2.2/lightbulb_Linux_x86_64.tar.gz"
-      sha256 "09634d0e95e2472c3d5be0bae98676cb165f76f85acd604d0656eb8255589b77"
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.3.0/lightbulb_Linux_x86_64.tar.gz"
+      sha256 "b44c11d8cf951cd369265618cf92d97f302bbdcb561aa5cf53e0a1e6b6a796fc"
 
       def install
         bin.install "lightbulb"
