@@ -5,20 +5,20 @@
 class Switch < Formula
   desc ""
   homepage "https://github.com/pixelboehm/ldt"
-  version "0.3.0"
+  version "0.5.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.3.0/switch_Darwin_x86_64.tar.gz"
-      sha256 "9a97ecb3d0176cfd32e1223d28466486223eda6bb0b393003be5db2abb8e9fef"
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.5.0/switch_Darwin_x86_64.tar.gz"
+      sha256 "d519b91fa6410ef25002f40fa371bb685dc1620ef64911373963f73b05258036"
 
       def install
         bin.install "switch"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.3.0/switch_Darwin_arm64.tar.gz"
-      sha256 "ae13353ea41a2559a4635c7189226e8572492ebdf0cc279465143536e3528e7e"
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.5.0/switch_Darwin_arm64.tar.gz"
+      sha256 "9c89e387c4e2d5672e951f0c6fff74361508f835330574b625baf9e64beec7ba"
 
       def install
         bin.install "switch"
@@ -27,17 +27,17 @@ class Switch < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.3.0/switch_Linux_x86_64.tar.gz"
-      sha256 "5042a3f62fd2d2b33a6ca2d19e6c6ea52ff40338599a8898c44d2de7338315a1"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.5.0/switch_Linux_arm64.tar.gz"
+      sha256 "22ad21eb7ad58717ee6541f13074a26485df61f12984dfd7fce6a67795f9feba"
 
       def install
         bin.install "switch"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.3.0/switch_Linux_arm64.tar.gz"
-      sha256 "8742dca3f71807eb83a92e581c290a6433132f198d79c81fa10a3daeb80f40c6"
+    if Hardware::CPU.intel?
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.5.0/switch_Linux_x86_64.tar.gz"
+      sha256 "78cc18c1fe10fba258d57cca5052b2d649a75cbde3d8bd8330c578f03cda78af"
 
       def install
         bin.install "switch"
