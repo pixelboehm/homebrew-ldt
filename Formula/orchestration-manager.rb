@@ -5,28 +5,26 @@
 class OrchestrationManager < Formula
   desc ""
   homepage "https://github.com/pixelboehm/longevity"
-  version "0.5.1"
+  version "0.6.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/pixelboehm/longevity/releases/download/v0.5.1/orchstration-manager_Darwin_arm64.tar.gz"
-      sha256 "d80940efdd6e658ef8cdc505e4a70e23dc7a3d7ef997142bfe14231550a529f9"
+      url "https://github.com/pixelboehm/longevity/releases/download/v0.6.0/orchstration-manager_Darwin_arm64.tar.gz"
+      sha256 "4c2dce4953ce65836727f57fc035bac8dd0db3ed49125c9392ab31615f2d6528"
 
       def install
-        system, "mkdir", "-p" "/etc/orchestration-manager"
-        system, "touch", "/etc/orchestration-manager/repositories.list"
-        system, "touch", "/etc/orchestration-manager/ldt.list"
+        system "mkdir", "-p" "/usr/local/etc/orchestration-manager"
+        system "touch", "/usr/local/etc/orchestration-manager/ldt.list"
         bin.installorchstration-manager
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pixelboehm/longevity/releases/download/v0.5.1/orchstration-manager_Darwin_x86_64.tar.gz"
-      sha256 "0398ede1b40d04f4f7491b51cb9e272fc05624cbd72a6f5bee02fb649515bbea"
+      url "https://github.com/pixelboehm/longevity/releases/download/v0.6.0/orchstration-manager_Darwin_x86_64.tar.gz"
+      sha256 "b3e5a848bfd1f317736156991d2d471510334c7d27efd16365a2d548ad1bdde5"
 
       def install
-        system, "mkdir", "-p" "/etc/orchestration-manager"
-        system, "touch", "/etc/orchestration-manager/repositories.list"
-        system, "touch", "/etc/orchestration-manager/ldt.list"
+        system "mkdir", "-p" "/usr/local/etc/orchestration-manager"
+        system "touch", "/usr/local/etc/orchestration-manager/ldt.list"
         bin.installorchstration-manager
       end
     end
@@ -34,24 +32,22 @@ class OrchestrationManager < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pixelboehm/longevity/releases/download/v0.5.1/orchstration-manager_Linux_arm64.tar.gz"
-      sha256 "3a992e12b9f0558aba57b0de64ae66e0092559724f5b1c7f3c5bd71d0761584d"
+      url "https://github.com/pixelboehm/longevity/releases/download/v0.6.0/orchstration-manager_Linux_arm64.tar.gz"
+      sha256 "49945bca173bcf4b64244b1a6e8857b120b94fc68f09b977feff381b68a95d18"
 
       def install
-        system, "mkdir", "-p" "/etc/orchestration-manager"
-        system, "touch", "/etc/orchestration-manager/repositories.list"
-        system, "touch", "/etc/orchestration-manager/ldt.list"
+        system "mkdir", "-p" "/usr/local/etc/orchestration-manager"
+        system "touch", "/usr/local/etc/orchestration-manager/ldt.list"
         bin.installorchstration-manager
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pixelboehm/longevity/releases/download/v0.5.1/orchstration-manager_Linux_x86_64.tar.gz"
-      sha256 "72173ae0a7e52cf6a828403baa8d3794d24a94bdb5f9bc368a737327063faa78"
+      url "https://github.com/pixelboehm/longevity/releases/download/v0.6.0/orchstration-manager_Linux_x86_64.tar.gz"
+      sha256 "78663607eb5dbaddb2a7c325b2b6b31174db2ee2e2dc6b15f873e9f5d7f55746"
 
       def install
-        system, "mkdir", "-p" "/etc/orchestration-manager"
-        system, "touch", "/etc/orchestration-manager/repositories.list"
-        system, "touch", "/etc/orchestration-manager/ldt.list"
+        system "mkdir", "-p" "/usr/local/etc/orchestration-manager"
+        system "touch", "/usr/local/etc/orchestration-manager/ldt.list"
         bin.installorchstration-manager
       end
     end
