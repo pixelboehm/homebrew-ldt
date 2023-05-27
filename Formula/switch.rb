@@ -5,20 +5,20 @@
 class Switch < Formula
   desc ""
   homepage "https://github.com/pixelboehm/ldt"
-  version "0.6.0"
+  version "0.7.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.6.0/switch_Darwin_x86_64.tar.gz"
-      sha256 "63b547cafb9e452ac45e4081b4d8088860bbdd66ef171b8459d4eb0e74f2c2c7"
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.7.0/switch_Darwin_x86_64.tar.gz"
+      sha256 "11140012b686e28b6829d5f5e35b862f464fd03abeb40d5e4987806ae4c45c13"
 
       def install
         bin.install "switch"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.6.0/switch_Darwin_arm64.tar.gz"
-      sha256 "bb2ed362d3a5e8825023d7104d8d3f95e965bb4c774752c003b15f9ab341e25b"
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.7.0/switch_Darwin_arm64.tar.gz"
+      sha256 "3d69dae913b1d45bb55b784978d3922d37f859a33a925c23f7c67d0bafa4e067"
 
       def install
         bin.install "switch"
@@ -28,16 +28,16 @@ class Switch < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.6.0/switch_Linux_x86_64.tar.gz"
-      sha256 "952b59cfcdf628ca7e78418fd17d9c7b54483bf49c94d6aa3413f67f7d4e9e72"
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.7.0/switch_Linux_x86_64.tar.gz"
+      sha256 "f2bb30ec7c86b7e59d6521886bac5388ea1bae7f278ecca2065c7d162b3f712d"
 
       def install
         bin.install "switch"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.6.0/switch_Linux_arm64.tar.gz"
-      sha256 "1b49cf912808265bdb311fa0cd7872fca59d810f9b29ed952943d11b30786656"
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.7.0/switch_Linux_arm64.tar.gz"
+      sha256 "6a24e121b072e1ef10ec7558475bc039db6b4671498a7e4016718781d7529270"
 
       def install
         bin.install "switch"
