@@ -5,20 +5,20 @@
 class Switch < Formula
   desc ""
   homepage "https://github.com/pixelboehm/ldt"
-  version "0.7.0"
+  version "0.8.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.7.0/switch_Darwin_x86_64.tar.gz"
-      sha256 "11140012b686e28b6829d5f5e35b862f464fd03abeb40d5e4987806ae4c45c13"
+    if Hardware::CPU.arm?
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.8.0/switch_Darwin_arm64.tar.gz"
+      sha256 "361e8b66beaa68db8097b5aed17e6e43aa0b7580d64f9965962e438b662eeba3"
 
       def install
         bin.install "switch"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.7.0/switch_Darwin_arm64.tar.gz"
-      sha256 "3d69dae913b1d45bb55b784978d3922d37f859a33a925c23f7c67d0bafa4e067"
+    if Hardware::CPU.intel?
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.8.0/switch_Darwin_x86_64.tar.gz"
+      sha256 "0526f36587fa015f675e09d93e93bcd0d6c8e073516e3f6a28115cb42f7fe8a0"
 
       def install
         bin.install "switch"
@@ -28,16 +28,16 @@ class Switch < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.7.0/switch_Linux_x86_64.tar.gz"
-      sha256 "f2bb30ec7c86b7e59d6521886bac5388ea1bae7f278ecca2065c7d162b3f712d"
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.8.0/switch_Linux_x86_64.tar.gz"
+      sha256 "3b8cd7c1d4cb23ef170f273e8e232509e525a89991519a583eb7d18c021d30f7"
 
       def install
         bin.install "switch"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.7.0/switch_Linux_arm64.tar.gz"
-      sha256 "6a24e121b072e1ef10ec7558475bc039db6b4671498a7e4016718781d7529270"
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.8.0/switch_Linux_arm64.tar.gz"
+      sha256 "ed8a527cf01d09f58f3148580faf7f619f3f1caf30cae6a08a1882491126f81c"
 
       def install
         bin.install "switch"
