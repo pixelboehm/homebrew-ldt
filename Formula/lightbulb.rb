@@ -5,20 +5,20 @@
 class Lightbulb < Formula
   desc ""
   homepage "https://github.com/pixelboehm/ldt"
-  version "0.8.0"
+  version "0.9.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.8.0/lightbulb_Darwin_arm64.tar.gz"
-      sha256 "6bbe7008a9147eb7aa3e4cde6f217548e1567f592019d93569fbbe251aa83c9e"
+    if Hardware::CPU.intel?
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.9.0/lightbulb_Darwin_x86_64.tar.gz"
+      sha256 "557a24b12e10ae7b2992ea05645b3d2e50286e8a9f771f24e50ae3d28f8d9cb5"
 
       def install
         bin.install "lightbulb"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.8.0/lightbulb_Darwin_x86_64.tar.gz"
-      sha256 "03774c7b689c28a196f44459b88d4317cda4d5c4fec6123d4c8b62158c7367fe"
+    if Hardware::CPU.arm?
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.9.0/lightbulb_Darwin_arm64.tar.gz"
+      sha256 "f4f4b7bbbe94a4b171f42f07324b34b8424f131eb3c81e6e19a45223b75a8289"
 
       def install
         bin.install "lightbulb"
@@ -27,17 +27,17 @@ class Lightbulb < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.8.0/lightbulb_Linux_x86_64.tar.gz"
-      sha256 "f55244608027b90e7476afaee17bd5752c3dd10688b53d8df822a55ada535cd7"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.9.0/lightbulb_Linux_arm64.tar.gz"
+      sha256 "3cc76019ea9a589e4595b3aba9467bdfde71cdc9c0be5038bb668c49ab0d7639"
 
       def install
         bin.install "lightbulb"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.8.0/lightbulb_Linux_arm64.tar.gz"
-      sha256 "83d99aef548d42ad2d7fb2da2ab4b1d37f4da5cc829ef14e6fe48df6298aadc2"
+    if Hardware::CPU.intel?
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.9.0/lightbulb_Linux_x86_64.tar.gz"
+      sha256 "087ba35d6b3266710146ed27a625af0cfdd879cda9814b537b7ede6897dc39aa"
 
       def install
         bin.install "lightbulb"
