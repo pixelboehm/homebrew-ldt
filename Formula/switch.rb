@@ -5,20 +5,20 @@
 class Switch < Formula
   desc ""
   homepage "https://github.com/pixelboehm/ldt"
-  version "0.8.0"
+  version "0.9.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.8.0/switch_Darwin_arm64.tar.gz"
-      sha256 "361e8b66beaa68db8097b5aed17e6e43aa0b7580d64f9965962e438b662eeba3"
+    if Hardware::CPU.intel?
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.9.0/switch_Darwin_x86_64.tar.gz"
+      sha256 "afba171419c05ffe221e34281c3cac584688cad69594aeb454181cb96863b94f"
 
       def install
         bin.install "switch"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.8.0/switch_Darwin_x86_64.tar.gz"
-      sha256 "0526f36587fa015f675e09d93e93bcd0d6c8e073516e3f6a28115cb42f7fe8a0"
+    if Hardware::CPU.arm?
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.9.0/switch_Darwin_arm64.tar.gz"
+      sha256 "4627d4dc78d53cd58e449a58cf3ec596890112a2254f4b75e4a3216acd33756c"
 
       def install
         bin.install "switch"
@@ -27,17 +27,17 @@ class Switch < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.8.0/switch_Linux_x86_64.tar.gz"
-      sha256 "3b8cd7c1d4cb23ef170f273e8e232509e525a89991519a583eb7d18c021d30f7"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.9.0/switch_Linux_arm64.tar.gz"
+      sha256 "1324b72b6e7eb340c9323b36c489b4127decd2d3c2845998a323401dcc3a1689"
 
       def install
         bin.install "switch"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pixelboehm/ldt/releases/download/v0.8.0/switch_Linux_arm64.tar.gz"
-      sha256 "ed8a527cf01d09f58f3148580faf7f619f3f1caf30cae6a08a1882491126f81c"
+    if Hardware::CPU.intel?
+      url "https://github.com/pixelboehm/ldt/releases/download/v0.9.0/switch_Linux_x86_64.tar.gz"
+      sha256 "abb6479f7cb5a855722374693481b20335a24f02f33f2acd478605528b2fc5df"
 
       def install
         bin.install "switch"
